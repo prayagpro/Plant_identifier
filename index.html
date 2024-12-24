@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Plant Analyzer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
+  <main>
+    <h1>🌱 AI Plant Analyzer</h1>
+    <form>
+      <!-- File Upload -->
+      <div class="image-picker">
+        <label for="fileInput">Upload a Plant Image:</label>
+        <input type="file" id="fileInput" name="file" accept="image/*">
+      </div>
+
+      <!-- Image Preview -->
+      <div id="image-preview" class="image-preview"></div>
+
+      <!-- Prompt Box -->
+      <div class="prompt-box">
+        <label for="prompt">Enter Prompt (Optional):</label>
+        <input name="prompt" id="prompt" type="text" placeholder="Describe your plant image...">
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit">🌿 Analyze Plant</button>
+    </form>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+      <div class="progress" style="width: 0;"></div>
+    </div>
+
+    <!-- Loader -->
+    <div id="loader" class="loader"></div>
+
+    <!-- Output Area -->
+    <div class="output">
+      <h3>Results</h3>
+      <p>(Results will appear here)</p>
+      <button id="speak-btn" class="speak-btn" style="display: none;">🔊 Speak Results</button>
+    </div>
+  </main>
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
