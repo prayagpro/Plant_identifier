@@ -4,7 +4,7 @@ import "./style.css";
 
 // 🔥 API Key 🔥
 // Replace this with your Gemini API key
-const API_KEY = "AIzaSyCfgAEabQlaTucD82d0AOYUeOR9qfq7Cts";
+const API_KEY = "Your API Key";
 
 // DOM Elements
 const form = document.querySelector("form");
