@@ -10,7 +10,6 @@
 - **Care Instructions:** Receive specific watering, sunlight, and soil recommendations to help your plant thrive.
 - **User-Friendly Interface:** Simple and intuitive layout for a seamless experience.
 - **Image Preview:** View a preview of the uploaded image before analysis.
-- **Progress Bar:** Visual feedback while the image is being processed.
 
 ---
 
