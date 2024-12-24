@@ -1,0 +1,208 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e3fce9, #c2f0ce);
+  color: #2c3e50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+body.dark-mode {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: #ecf0f1;
+}
+
+main {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px;
+  padding: 24px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border: 3px solid #28a745;
+  animation: fadeIn 1s ease-in-out;
+}
+
+main.dark-mode {
+  background: #34495e;
+  border-color: #16a085;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 8px 12px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease-in-out;
+}
+
+.theme-toggle:hover {
+  background: #218838;
+}
+
+/* Heading Styling */
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 24px;
+  color: #28a745;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1::before {
+  content: "🌱";
+  font-size: 36px;
+  margin-right: 8px;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.image-picker,
+.prompt-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.image-picker label,
+.prompt-box label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.image-picker input,
+.prompt-box input {
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.image-picker input:hover,
+.prompt-box input:hover {
+  border-color: #28a745;
+  box-shadow: 0 0 8px rgba(40, 167, 69, 0.5);
+}
+
+.image-picker input:focus,
+.prompt-box input:focus {
+  border-color: #28a745;
+  outline: none;
+  box-shadow: 0 0 10px rgba(40, 167, 69, 0.8);
+}
+
+/* Button Styling */
+button {
+  padding: 12px 16px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  background: #28a745;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #218838;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  background: #f3f3f3;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 10px;
+  margin-top: 16px;
+}
+
+.progress {
+  height: 100%;
+  background: #28a745;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Loader */
+.loader {
+  display: none;
+  margin: 16px auto;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #28a745;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Output Box */
+.output {
+  margin-top: 24px;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  background: #f1f8f4;
+  color: #2c3e50;
+  border: 2px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
